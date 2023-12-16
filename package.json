@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./src/server.js",
     "dev": "nodemon ./src/server.js",
-    "migrate": "knex migrated:latest"
+    "migrate": "knex migrate:latest"
   },
   "keywords": [],
   "author": "Mariana da Silva",

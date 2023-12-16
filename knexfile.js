@@ -8,10 +8,11 @@ module.exports = {
     },
     useNullAsDefault: true,
     pool: {
-      afterCreate: (conn, cb) => conn.run("PRAGMA foreign_key = ON",)
+      afterCreate: (conn, cb) => conn.run("PRAGMA foreign_key = ON", cb) 
     },
     migrations: {
-      directory: path.resolve(__dirname, "src", "database", "knex","migrations")
+      directory: path.resolve(__dirname, "src", "database", "knex","migrations"),
+      disableMigrationsListValidarion: true
     }
   }
 };
